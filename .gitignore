@@ -1,3 +1,5 @@
+.DS_Store
+
 /chapter2/*
 !/chapter2/src/
 !/chapter2/build.sbt
