@@ -1,0 +1,152 @@
+2020.08.10 22:53:19 INFO  started: Metals version 0.9.2 in workspace '/Users/yukisato/Documents/FPinScala/chapter2' for client vscode.
+2020.08.10 22:53:19 INFO  time: initialize in 0.29s
+2020.08.10 22:53:19 INFO  no build target: using presentation compiler with only scala-library
+2020.08.10 22:55:40 INFO  skipping build import with status 'Dismissed'
+2020.08.10 23:00:45 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/exerxise2_1_test.scala
+2020.08.10 23:01:31 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/exercise2_1.scala
+2020.08.10 23:01:53 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/exercise2_1.scala
+2020.08.10 23:03:29 WARN  code navigation does not work for the file '/Users/yukisato/Documents/FPinScala/chapter2/src/test/exerxise2_1_test.scala' because it doesn't belong to a build target.
+2020.08.10 23:05:37 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/exerxise2_1_test.scala
+2020.08.10 23:06:40 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/exerxise2_1_test.scala
+2020.08.10 23:08:38 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/exercise2_1.scala
+2020.08.10 23:09:10 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:09:14 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_1.scala
+2020.08.10 23:09:14 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:09:31 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:10:01 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:11:03 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:11:10 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:11:20 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:11:22 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:11:29 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:11:38 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:11:43 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:11:51 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:11:56 WARN  code navigation does not work for the file '/Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala' because it doesn't belong to a build target.
+2020.08.10 23:11:56 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:12:03 WARN  code navigation does not work for the file '/Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala' because it doesn't belong to a build target.
+2020.08.10 23:12:03 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:12:23 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:12:28 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:12:34 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:13:18 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_1.scala
+2020.08.10 23:13:32 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:15:14 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_3.scala
+2020.08.10 23:22:34 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:23:16 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:23:32 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_1.scala
+2020.08.10 23:24:40 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:25:08 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exerxise2_1_test.scala
+2020.08.10 23:25:43 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:26:11 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala
+2020.08.10 23:26:19 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_1_test.scala
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[<error>]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 174)
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[<error>]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 167)
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[<error>]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 168)
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[Int]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 169)
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[Int]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 169)
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala in Array[Int]RangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala, 159, 159, 169)
+2020.08.10 23:31:35 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:32:32 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:32:35 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_1.scala
+2020.08.10 23:32:35 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_2.scala
+2020.08.10 23:32:36 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_3.scala
+2020.08.10 23:32:37 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_2.scala
+2020.08.10 23:32:37 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_1.scala
+2020.08.10 23:36:46 WARN  code navigation does not work for the file '/Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala' because it doesn't belong to a build target.
+2020.08.10 23:38:04 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala
+2020.08.10 23:39:27 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala
+2020.08.10 23:40:40 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:41:27 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/test/scala/exercise2_2_test.scala
+2020.08.10 23:41:59 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_2.scala
+2020.08.10 23:45:19 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_2.scala
+2020.08.10 23:45:19 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_3.scala
+2020.08.10 23:45:20 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/list2_1.scala
+2020.08.11 00:02:32 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_3.scala
+8 11, 2020 12:03:35 午前 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+重大: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying og.categories.intersect[String](ig.categories).nonEmpty
+found that og.categories.intersect[String](ig.categories).nonEmpty is false
+where ig = Literal
+where og = Typ
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying og.categories.intersect[String](ig.categories).nonEmpty
+found that og.categories.intersect[String](ig.categories).nonEmpty is false
+where ig = Literal
+where og = Typ
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1592)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying og.categories.intersect[String](ig.categories).nonEmpty
+found that og.categories.intersect[String](ig.categories).nonEmpty is false
+where ig = Literal
+where og = Typ
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.internal.prettyprinters.TreeSyntax$SyntaxInstances.groupNeedsParens$1(TreeSyntax.scala:111)
+	at scala.meta.internal.prettyprinters.TreeSyntax$SyntaxInstances.p(TreeSyntax.scala:126)
+	at scala.meta.internal.prettyprinters.TreeSyntax$SyntaxInstances.$anonfun$syntaxTree$1(TreeSyntax.scala:602)
+	at scala.meta.prettyprinters.Syntax$$anon$1.apply(Syntax.scala:9)
+	at scala.meta.internal.prettyprinters.TreeSyntax$.$anonfun$apply$1(TreeSyntax.scala:1168)
+	at scala.meta.prettyprinters.Syntax$$anon$1.apply(Syntax.scala:9)
+	at scala.meta.prettyprinters.Api$XtensionSyntax.syntax(Api.scala:11)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.apply(DocumentSymbolProvider.scala:195)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1(SimpleTraverser.scala:5)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1$adapted(SimpleTraverser.scala:5)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at scala.meta.transversers.SimpleTraverser.apply(SimpleTraverser.scala:5)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.continue$1(DocumentSymbolProvider.scala:93)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.apply(DocumentSymbolProvider.scala:114)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1(SimpleTraverser.scala:5)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1$adapted(SimpleTraverser.scala:5)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at scala.meta.transversers.SimpleTraverser.apply(SimpleTraverser.scala:5)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.continue$1(DocumentSymbolProvider.scala:93)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.newOwner$1(DocumentSymbolProvider.scala:97)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.apply(DocumentSymbolProvider.scala:152)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1(SimpleTraverser.scala:5)
+	at scala.meta.transversers.SimpleTraverser.$anonfun$apply$1$adapted(SimpleTraverser.scala:5)
+	at scala.collection.immutable.List.foreach(List.scala:431)
+	at scala.meta.transversers.SimpleTraverser.apply(SimpleTraverser.scala:5)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.continue$1(DocumentSymbolProvider.scala:93)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.apply(DocumentSymbolProvider.scala:114)
+	at scala.meta.internal.metals.DocumentSymbolProvider$SymbolTraverser.symbols(DocumentSymbolProvider.scala:45)
+	at scala.meta.internal.metals.DocumentSymbolProvider.documentSymbols(DocumentSymbolProvider.scala:29)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$documentSymbols$1(ScalaPresentationCompiler.scala:150)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	... 3 more
+
+2020.08.11 00:05:43 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_3.scala
+2020.08.11 00:06:40 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_3.scala
+2020.08.11 00:07:14 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala
+something's wrong: no file:///Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala in (A, B) => CRangePosition(file:///Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala, 44, 50, 54)
+8 11, 2020 12:08:04 午前 scala.meta.internal.pc.completions.Completions completionPosition
+重大: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.completions.OverrideCompletions$OverrideCompletion.<init>(OverrideCompletions.scala:46)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe(Completions.scala:504)
+	at scala.meta.internal.pc.completions.Completions.completionPositionUnsafe$(Completions.scala:413)
+	at scala.meta.internal.pc.MetalsGlobal.completionPositionUnsafe(MetalsGlobal.scala:29)
+	at scala.meta.internal.pc.completions.Completions.completionPosition(Completions.scala:405)
+	at scala.meta.internal.pc.completions.Completions.completionPosition$(Completions.scala:390)
+	at scala.meta.internal.pc.MetalsGlobal.completionPosition(MetalsGlobal.scala:29)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:444)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:57)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$complete$1(ScalaPresentationCompiler.scala:182)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$withInterruptableCompiler$1(CompilerAccess.scala:87)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020.08.11 00:09:54 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala
+2020.08.11 00:10:56 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala
+2020.08.11 00:11:31 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala
+2020.08.11 00:12:00 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_4.scala
+2020.08.11 00:12:14 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_5.scala
+2020.08.11 00:15:28 WARN  no build target for: /Users/yukisato/Documents/FPinScala/chapter2/src/main/scala/exercise2_5.scala
