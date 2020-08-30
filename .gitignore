@@ -1,5 +1,5 @@
 .DS_Store
 
-/chapter2/*
-!/chapter2/src/
-!/chapter2/build.sbt
+/FPinScala/chapter2/*
+!/FPinScala/chapter2/src/
+!/FPinScala/chapter2/build.sbt
