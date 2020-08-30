@@ -1,2 +1,2 @@
 # practice
-reoisitory for my study
+repoisitory for my study
