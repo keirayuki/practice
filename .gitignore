@@ -1,6 +1,15 @@
 .DS_Store
+.metals
+.gitignore
 
 /FPinScala/.metals
+
+# FPinScala Chapter2
 /FPinScala/chapter2/*
 !/FPinScala/chapter2/src/
 !/FPinScala/chapter2/build.sbt
+
+# FPinScala Chapter3
+/FPinScala/chapter3/*
+!/FPinScala/chapter3/src/
+!/FPinScala/chapter3/build.sbt
