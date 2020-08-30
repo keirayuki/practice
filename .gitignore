@@ -1,5 +1,6 @@
 .DS_Store
 
+/FPinScala/.metals
 /FPinScala/chapter2/*
 !/FPinScala/chapter2/src/
 !/FPinScala/chapter2/build.sbt
