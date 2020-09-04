@@ -1,8 +1,10 @@
 .DS_Store
 .metals
 .gitignore
+.vscode
 
 /FPinScala/.metals
+/FPinScala/README.md
 
 # FPinScala Chapter2
 /FPinScala/chapter2/*
