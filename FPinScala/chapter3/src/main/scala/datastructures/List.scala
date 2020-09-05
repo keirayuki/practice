@@ -25,6 +25,18 @@ object List {
             case Nil => a2
             case Cons(h,t) => Cons(h, append(t, a2))
         }
+    
+    def foldRight[A,B](as: List[A], z: B)(f: (A,B) => B): B =
+        as match {
+            case Nil => z
+            case Cons(x,xs) => f(x, foldRight(xs,z)(f))
+        }
+
+    def sum2(ns: List[Int]) =
+        foldRight(ns,0)((x,y) => x + y)
+    
+    def product2(ns: List[Double]) =
+        foldRight(ns,1.0)(_*_)
 
     /*
       Exercise3.2 :
@@ -80,5 +92,66 @@ object List {
         case Cons(h,Nil) => Nil
         case Cons(h,t) => Cons(h,init(t)) 
     }
+
+    /*
+      Exercise3.9 :
+        foldRightを使ってリストの長さを計算せよ
+    */
+    def length[A](as: List[A]): Int =
+        foldRight(as,0)((_,n) => n+1)
+
+    /*
+      Exercise3.10 :
+        foldLeftを記述せよ。
+    */
+    def foldLeft[A,B](as: List[A], z: B)(f: (B, A) => B): B = 
+        as match {
+            case Nil => z
+            case Cons(x, xs) => foldLeft(xs,f(z,x))(f)
+        }
+
+    /*
+      Exercise3.11 :
+        foldLeftを使って、sum、productおよびリストの長さを返す関数を記述せよ。
+    */
+    def sum3(ns: List[Int]): Int =
+        foldLeft(ns,0)((z,x) => z + x)
+    
+    def product3(ns: List[Int]): Int =
+        foldLeft(ns,1)(_*_)
+    
+    def length2(ns: List[Int]): Int =
+        foldLeft(ns,0)((n,_) => n+1)
+    
+    /*
+      Exercise3.12 :
+        要素が逆に並んだリストを返す関数を記述せよ。
+    */
+    def reverse[A](as: List[A]): List[A] =
+        foldLeft(as,Nil:List[A])((z,x) => Cons(x,z))
+
+    /*
+      Exercise3.13 :
+        foldRightを使って、foldLeftを記述することは可能か。
+        またはその逆はどうか。
+    */
+
+
+    /*
+      Exercise3.14 :
+        foldLeftまたはfoldRightをベースとしてappendを実装せよ。
+    */
+    def append2[A](a1: List[A], a2: List[A]): List[A] = 
+        foldRight(a1,a2)(Cons(_,_))
+
+    /*
+      Exercise3.15 :
+        複数のリストからなるリストを１つのリストとして、連結する関数を記述せよ。
+        すでに、定義した関数を使ってみること。
+    */
+    def concat[A](as: List[List[A]]): List[A] =
+        foldRight(as,Nil:List[A])(append2)
+
+       
 
 }
