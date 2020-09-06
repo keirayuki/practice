@@ -152,6 +152,73 @@ object List {
     def concat[A](as: List[List[A]]): List[A] =
         foldRight(as,Nil:List[A])(append2)
 
-       
+    /*
+      Exercise3.16 :
+        各要素に１を足すことで、整数のリストを変換する関数を記述せよ。
+    */
+    def add_one(as: List[Int]): List[Int] =
+        foldRight(as,Nil:List[Int])((x,y) => Cons(x+1,y))
+
+    /*
+      Exercise3.17 :
+        List[Double]の各値をStringに変換する関数を実装せよ。
+        d.toStringという式を使ってd:Doubleをstringに変換できる。
+    */
+    def D_to_String(as: List[Double]): List[String] =
+        foldRight(as,Nil:List[String])((x,y) => Cons(x.toString(),y))
+
+    /*
+      Exercise3.18 :
+        Listの各要素を変更し、かつリストの構造をそのまま保つ総称関数mapを記述せよ。
+    */
+    def map[A,B](as: List[A])(f: A => B): List[B] =
+        foldRight(as,Nil:List[B])((x,y) => Cons(f(x),y))
+
+    /*
+      Exercise3.19 :
+        与えられた述語条件が満たされるまでリストから要素を削除するfilter関数を記述せよ。
+        この関数を使って、List[Int]から奇数を全て削除せよ。
+    */
+    def filter[A](as: List[A])(f: A => Boolean): List[A] =
+        foldRight(as,Nil:List[A])((x,y) => if(f(x)) Cons(x,y) else y)
+
+    /*
+      Exercise3.20 :
+        mapと同じような働きをするflatmap関数を記述せよ。この関数は、単一の結果ではなく、
+        リストを返し、そのリストは最終的なリストに挿入されなければならない。
+    */
+    def flatMap[A,B](as: List[A])(f: A => List[B]): List[B] =
+        foldRight(as,Nil:List[B])((x,y) => append2(f(x),y))
+
+    /*
+      Exercise3.21 :
+        flatMapを使ってfilterを実装せよ。
+    */
+    def filter2[A](as: List[A])(f: A => Boolean): List[A] =
+        flatMap(as)((x) => if(f(x)) List.apply(x) else Nil)
+
+    /*
+      Exercise3.22 :
+        リストを２つ受け取り、対応する要素どうしを足し合わせて新しいリストを生成する関数を記述せよ。
+    */
+    def zipWithSum(as1: List[Int], as2: List[Int]): List[Int] = (as1,as2) match {
+        case (_, Nil) => Nil
+        case (Nil, _) => Nil
+        case (Cons(h1,t1),Cons(h2,t2)) => Cons(h1+h2,zipWithSum(t1,t2))
+    }
+        
+    /*
+      Exercise3.23 :
+        Exercise3.22で作成した関数を、整数または加算に限定されないように一般化せよ。
+        一般化された関数にはzipwithという名前をつけよ。
+    */
+    def zipWith[A,B,C](as1: List[A], as2: List[B])(f: (A,B) => C): List[C] = (as1,as2) match {
+        case (_, Nil) => Nil
+        case (Nil, _) => Nil
+        case (Cons(h1,t1),Cons(h2,t2)) => Cons(f(h1,h2),zipWith(t1,t2)(f))
+    }
+        
+
+
 
 }
