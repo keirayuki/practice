@@ -217,6 +217,32 @@ object List {
         case (Nil, _) => Nil
         case (Cons(h1,t1),Cons(h2,t2)) => Cons(f(h1,h2),zipWith(t1,t2)(f))
     }
+
+    /*
+     preExercise3.24
+       Listの最初のn個の要素からなるリストを返す。
+       Exercise3.24を解くための補助関数
+    */
+    def take[A](as: List[A], n: Int): List[A] = as match {
+        case Nil => as
+        case Cons(h,t) if(n > 0) => Cons(h,take(t,n-1))
+        case _ => Nil
+    }
+
+    /*
+      Exercise3.24 :
+        Listに別のListがサブシーケンスとして含まれているかどうかを調べる
+        subseaqueceを実装せよ。例えば、List(1,2,3,4)には、List(1,2)、
+        List(2,3)、List(4)などが含まれている。
+    */
+    def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
+        sup match {
+        case _ if (take(sup,length(sub)) == sub) => true 
+        case Cons(h,t) if (length(sup) <= length(sub)) => false
+        case Cons(_,t) if(length(sup) > length(sub)) => hasSubsequence(t,sub) 
+        }
+
+    }
         
 
 

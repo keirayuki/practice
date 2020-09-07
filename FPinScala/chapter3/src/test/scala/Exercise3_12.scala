@@ -9,8 +9,6 @@ class Exercise3_12 extends AnyFlatSpec with Diagrams {
   val ex2: List[Int] = List.apply(1,10,12,16,20,30) 
   val ex3: List[Nothing] = Nil
 
-  println(List.reverse(ex1))
-
   // Exercise3.12: reverseのテスト
   "reverse関数" should "Listの要素を逆に並べたリストを返す。" in {
     assert(List.reverse(ex1) === List.apply(5,4,2))
