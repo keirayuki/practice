@@ -51,6 +51,7 @@ trait Option[+A]{
 
     def variance(xs: Seq[Double]): Option[Double] = 
       mean(xs).flatMap(m => mean(xs.map(x => math.pow(x - m, 2))))
+    
 }
 
 case class Some[+A](get: A) extends Option[A]

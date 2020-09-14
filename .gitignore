@@ -20,3 +20,8 @@
 /FPinScala/chapter4/*
 !/FPinScala/chapter4/src/
 !/FPinScala/chapter4/build.sbt
+
+# FPinScala Chapter5
+/FPinScala/chapter5/*
+!/FPinScala/chapter5/src/
+!/FPinScala/chapter5/build.sbt
