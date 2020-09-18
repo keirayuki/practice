@@ -45,6 +45,47 @@ trait Stream[+A] {
     case _ => empty 
   }
 
+  def exists(p: A => Boolean): Boolean = this match {
+    case Cons(h, t) => p(h()) || t().exists(p)
+    case _ => false
+  }
+
+  def foldRight[B](z: => B)(f: (A, => B) => B): B =
+    this match {
+      case Cons(h, t) => f(h(), t().foldRight(z)(f))
+      case _ => z
+    }
+
+  def exists2(p: A => Boolean): Boolean =
+    foldRight(false)((a, b) => p(a) || b)
+
+  /* Exercise 5.4
+  * Streamの要素のうち、指定された述語と、マッチするものを全てチェックする
+  * forAllを実装せよ。マッチしない値が検出された時点でチェックを終了しなければならない。
+  */
+  def foaAll(p: A => Boolean): Boolean =
+    foldRight(true)((a, b) => p(a) && b)
+
+  /* Exercise 5.5
+  * foldRightを使ってtakeWhileを実装せよ。
+  */
+  def takeWhile2(p: A => Boolean):Stream[A] =
+    foldRight(empty[A])((a, b) => if(p(a)) cons(a, b) else empty)
+
+  /* Exercise 5.7
+  * foldRightを使って、map、filter、append、flatMapを実装せよ。
+  */
+  def map[B](p: A => B):Stream[B] = 
+    foldRight(empty[B])((a, b) => cons(p(a),b))
+
+  def filter(p: A => Boolean):Stream[A] =
+    foldRight(empty[A])((a, b) => if(p(a)) cons(a, b) else b)
+
+  def append[B>:A](sr: Stream[B]):Stream[B] =
+    foldRight(sr)((a, b) => cons(a,b))
+    
+  def flatMap[B](p: A => Stream[B]):Stream[B] =
+    foldRight(empty[B])((a, b) => p(a) append(b))
 
 }
 case object Empty extends Stream[Nothing]
