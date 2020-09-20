@@ -87,6 +87,37 @@ trait Stream[+A] {
   def flatMap[B](p: A => Stream[B]):Stream[B] =
     foldRight(empty[B])((a, b) => p(a) append(b))
 
+  /* Exercise 5.13
+  * unfoldを使ってmap、take、takeWhile、zipWith、zipAllを実装せよ。
+  * zipAll関数では、どちらかのストリーム要素が残っている限り、評価を続ける必要がある。
+  * この関数はストリームが完全に評価されたかどうかを示すのにOptionを使用する。
+  */
+  def map2[B](p: A => B): Stream[B] =
+    unfold(this){
+      case Cons(h, t) => Some((p(h()), t()))
+      case _ => None
+    }
+
+  def take2(n: Int): Stream[A] =
+    unfold((this, n)){
+      case (Cons(h,t), n) if(n > 0) => Some((h(),(t(),n-1)))
+      case _ => None
+    }
+  
+  def zipWith[B,C](s2: Stream[B])(p: (A, B) => C): Stream[C] = 
+    unfold((this,s2)){
+      case (Cons(h,t), Cons(h2,t2)) => Some(p(h(),h2()),(t(),t2()))
+      case _ => None
+    }
+
+  def zipAll[B](s2: Stream[B]): Stream[(Option[A], Option[B])] =
+    unfold((this,s2)){
+      case (Empty, Empty) => None
+      case (Cons(h,t), Empty) => Some(((Some(h())), None), ((t(), empty)))
+      case (Empty, Cons(h2,t2)) => Some((None, (Some(h2()))), (empty, t2()))
+      case (Cons(h,t), Cons(h2,t2)) => Some(((Some(h())), (Some(h2()))), ((t(),t2())))
+    }
+
 }
 case object Empty extends Stream[Nothing]
 case class Cons[+A](h: () => A, t: () => Stream[A]) extends Stream[A]
@@ -105,6 +136,54 @@ object Stream {
 
   // スマートコンストラクタ
   def empty[A]: Stream[A] = Empty
+
+  /* Exercise 5.8
+  * onesを少し一般化し、指定された値の無限ストリームを返すconstant関数を記述せよ
+  */
+  def constant[A](a: A):Stream[A] =
+    cons(a, constant(a))
+
+  /* Exercise 5.9
+  * nで始まってn+1、n+2と続く整数の無限ストリームを生成する関数を記述せよ。
+  */
+  def from(n: Int):Stream[Int] =
+    cons(n, from(n+1))
+
+  /* Exercise 5.10
+  * フィボナッチ数列の無限ストリームを生成するfibs関数を記述せよ。
+  */
+  def fibs:Stream[Int] = {
+    def go(a: Int, b: Int):Stream[Int] =
+      cons(a,go(b,a+b))
+    go(0,1)
+  }
+
+  /* Exercise 5.11
+  * より汎用的なストリーム関数unfoldを記述せよ。
+  * 初期状態に加えて、以下の状態と生成されるストリームの次の値を生成する関数を受け取る。
+  */
+  def unfold[A,S](z: S)(f: S => Option[(A,S)]): Stream[A] =
+    f(z) match {
+      case Some((a,s)) => cons(a, unfold(s)(f))
+      case None => empty 
+    }
+
+  /* Exercise 5.12
+  * unfoldを使って、fibs、from、constant、onesを記述せよ。
+  */
+
+  // 以下の構文は右と一緒。p => p match { case (a, b) => ... }
+  def fibs2: Stream[Int] =
+    unfold((0,1)){ case (a,b) => Some(a,(b, a+b))}
+
+  def from2(n: Int): Stream[Int] =
+    unfold(n)(a => Some(a,a+1))
+
+  def constant2[A](a: A): Stream[A] =
+    unfold(a)(a => Some(a,a))
+
+  def ones2: Stream[Int] =
+    unfold(1)(a => Some(1,1))
 
   def apply[A](as: A*): Stream[A] =
     if (as.isEmpty) empty
