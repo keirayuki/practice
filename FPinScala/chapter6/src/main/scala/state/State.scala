@@ -84,7 +84,108 @@ object RNG {
   /* Exercise 6.5
   * mapを使ってdoubleをもう少し要領よく実装しなおせ
   */
-  def mapViaMap: Rand[Double] = 
+  def doubleViaMap: Rand[Double] = 
     map(nonNegativeInt)(i => i / (Int.MaxValue.toDouble+1))
+
+  /* Exercise 6.6
+  * map2を実装せよ。この関数は、raとrbの２つのアクションと、
+  * それらの結果を結合する関数fを受け取り、それらを結合する新しいアクションを返す。
+  */
+  def map2[A,B,C](ra: Rand[A], rb: Rand[B])(f: (A, B) => C): Rand[C] = {
+    rng => {
+    val (i1,r1) = ra(rng)
+    val (i2,r2) = rb(r1)
+    (f(i1, i2), r2)
+    }
   }
+
+  def both[A,B](ra: Rand[A], rb: Rand[B]): Rand[(A,B)] =
+    map2(ra, rb)((_, _))
+
+  val randIntDouble: Rand[(Int, Double)] = both(int, double)
+
+  val randDoubleInt: Rand[(Double, Int)] = both(double, int)
+
+  /* Exercise 6.7
+  * 遷移のListを一つの繊維にまとめるためのsequence関数を実装せよ。
+  * 標準らいぶらりList.fill(n)(x)関数を使って、xをn回繰り返すリストを作成できる。
+  */
+  def sequence[A](fs: List[Rand[A]]): Rand[List[A]] = ???
+
+  // 0~n(nは含まない）の整数を生成する
+  def nonNegativeLessThen(n: Int): Rand[Int] = { rng =>
+    val (i, rng2) = nonNegativeInt(rng)
+    val mod = i % n
+    if (i + (n-1) - mod >= 0)
+      (mod, rng2)
+    else nonNegativeLessThen(n)(rng)
+
+  }
+
+  /* Exercise 6.8
+  * flatMapを実装し、それを使ってnonNegativeLessThanを実装せよ。
+  */
+  def flatMap[A,B](f: Rand[A])(g: A => Rand[B]): Rand[B] = { rng =>
+    val (i, r) = f(rng)
+    g(i)(r)
+  }
+
+  def nonNegativeLessThenViaflatMap(n: Int): Rand[Int] =
+    flatMap(nonNegativeInt){ i =>
+      val mod = i % n
+      if (i + (n-1) - mod >= 0) {rng => (mod, rng)} else nonNegativeLessThenViaflatMap(n)
+    }
+
+  /* Exercise 6.9
+  * flatMapを使ってmapとmap2を再実装せよ。
+  */
+  def mapViaFlatMap[A,B](s: Rand[A])(f: A => B): Rand[B] =
+    flatMap(s){ i =>
+      rng => (f(i), rng)
+    }
+
+  def map2ViaFlatMap[A,B,C](ra: Rand[A], rb: Rand[B])(f: (A, B) => C): Rand[C] =
+    flatMap(ra){ i => 
+      flatMap(rb){i2 => 
+         rng => (f(i,i2), rng)
+      }
+    }
+
+}
+
+case class State[S,+A](run: S => (A, S)) {
+
+  def map[B](f: A => B): State[S, B] = this match {
+    case State(r) => State(
+      x => r(x) match {
+        case (a,s) => (f(a), s)
+      }
+    )
+  }
+    
+  def map2[B,C](sb: State[S, B])(f: (A, B) => C): State[S, C] = this match {
+    case State(r1) => State(
+      x1 => r1(x1) match {
+        case (a1, s1) => sb match {
+          case State(r2) => r2(s1) match {
+            case (a2, s2) => (f(a1, a2), s2)
+          }
+        }
+      }
+    )
+  }
+
+  def flatMap[B](f: A => State[S, B]): State[S, B] = this match {
+    case State(r) => State(
+      x => r(x) match {
+        case (a, s) => f(a).run(s) 
+      }
+    )
+  }
+    
+}
+
+object State {
+  type Rand[A] = State[RNG, A]
+}
 
