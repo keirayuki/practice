@@ -30,3 +30,8 @@
 /FPinScala/chapter6/*
 !/FPinScala/chapter6/src/
 !/FPinScala/chapter6/build.sbt
+
+# FPinScala Chapter7
+/FPinScala/chapter7/*
+!/FPinScala/chapter7/src/
+!/FPinScala/chapter7/build.sbt
