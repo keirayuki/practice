@@ -2,6 +2,7 @@
 .metals
 .gitignore
 .vscode
+/HandsOnScala
 
 /FPinScala/.metals
 /FPinScala/README.md
@@ -35,3 +36,8 @@
 /FPinScala/chapter7/*
 !/FPinScala/chapter7/src/
 !/FPinScala/chapter7/build.sbt
+
+# FPinScala Chapter8
+/FPinScala/chapter8/*
+!/FPinScala/chapter8/src/
+!/FPinScala/chapter8/build.sbt
