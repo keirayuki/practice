@@ -7,37 +7,7 @@
 /FPinScala/.metals
 /FPinScala/README.md
 
-# FPinScala Chapter2
-/FPinScala/chapter2/*
-!/FPinScala/chapter2/src/
-!/FPinScala/chapter2/build.sbt
-
-# FPinScala Chapter3
-/FPinScala/chapter3/*
-!/FPinScala/chapter3/src/
-!/FPinScala/chapter3/build.sbt
-
-# FPinScala Chapter4
-/FPinScala/chapter4/*
-!/FPinScala/chapter4/src/
-!/FPinScala/chapter4/build.sbt
-
-# FPinScala Chapter5
-/FPinScala/chapter5/*
-!/FPinScala/chapter5/src/
-!/FPinScala/chapter5/build.sbt
-
-# FPinScala Chapter6
-/FPinScala/chapter6/*
-!/FPinScala/chapter6/src/
-!/FPinScala/chapter6/build.sbt
-
-# FPinScala Chapter7
-/FPinScala/chapter7/*
-!/FPinScala/chapter7/src/
-!/FPinScala/chapter7/build.sbt
-
-# FPinScala Chapter8
-/FPinScala/chapter8/*
-!/FPinScala/chapter8/src/
-!/FPinScala/chapter8/build.sbt
+# FPinScala
+/FPinScala/*
+!/FPinScala/*/src/
+!/FPinScala/*/build.sbt
